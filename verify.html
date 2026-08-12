@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -26,222 +25,238 @@
 <body>
 
 
-<main class="credential-card">
+    <main class="credential-card">
 
 
-    <!-- VERIFIED HEADER -->
+        <!-- =====================================
+             VERIFIED BANNER
+        ====================================== -->
 
-    <section class="verified-banner">
+        <section class="verified-banner">
 
-
-        <div class="check-circle">
-
-            ✓
-
-        </div>
-
-
-        <div>
-
-            <h1>
-                VERIFIED STUDENT
-            </h1>
-
-            <p>
-                Digital Credential Demo
-            </p>
-
-        </div>
+            <div class="check-circle">
+                ✓
+            </div>
 
 
-    </section>
+            <div>
+
+                <h1>
+                    VERIFIED STUDENT
+                </h1>
+
+                <p>
+                    Digital Credential Demo
+                </p>
+
+            </div>
+
+        </section>
 
 
-    <!-- COMPANY -->
+        <!-- =====================================
+             ORGANIZATION
+        ====================================== -->
 
-    <section class="organization">
+        <section class="organization">
 
-
-        <div class="org-logo">
-
-            ST
-
-        </div>
-
-
-        <div class="org-name">
-
-            <h2>
-                SYSTEM TRON
-            </h2>
-
-            <p>
-                Live Verification Record
-            </p>
-
-        </div>
+            <div class="org-logo">
+                ST
+            </div>
 
 
-    </section>
+            <div class="org-name">
+
+                <h2>
+                    SYSTEM TRON
+                </h2>
+
+                <p>
+                    Live Verification Record
+                </p>
+
+            </div>
+
+        </section>
 
 
-    <div class="divider"></div>
+        <div class="divider"></div>
 
 
-    <!-- STUDENT NAME -->
+        <!-- =====================================
+             STUDENT NAME
+        ====================================== -->
 
-    <section class="field">
+        <section class="field">
 
-        <label>
-            STUDENT NAME
-        </label>
+            <label>
+                STUDENT NAME
+            </label>
 
-        <div
-            id="studentName"
-            class="value"
+            <div
+                id="studentName"
+                class="value"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             COURSE
+        ====================================== -->
+
+        <section class="field">
+
+            <label>
+                PROGRAM &amp; COURSE
+            </label>
+
+            <div
+                id="course"
+                class="value"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INSTITUTION
+        ====================================== -->
+
+        <section class="field">
+
+            <label>
+                INSTITUTION
+            </label>
+
+            <div
+                id="institution"
+                class="value"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ID
+        ====================================== -->
+
+        <section class="field">
+
+            <label>
+                REGISTRATION / ID
+            </label>
+
+            <div
+                id="displayCredentialId"
+                class="value gold"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             DATE
+        ====================================== -->
+
+        <section class="field">
+
+            <label>
+                ISSUED ON
+            </label>
+
+            <div
+                id="issuedDate"
+                class="value"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STATUS
+        ====================================== -->
+
+        <section class="field">
+
+            <label>
+                CREDENTIAL STATUS
+            </label>
+
+            <div
+                id="status"
+                class="value gold"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <div class="divider"></div>
+
+
+        <!-- =====================================
+             REGISTRY HASH
+        ====================================== -->
+
+        <section class="hash-box">
+
+            <label>
+                REGISTRY HASH
+            </label>
+
+            <div
+                id="registryHash"
+                class="hash"
+            >
+                Loading...
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SAVE BUTTON
+        ====================================== -->
+
+        <button
+            class="save-button"
+            onclick="downloadCredential()"
         >
-            Loading...
-        </div>
 
-    </section>
+            ↓ &nbsp; Save Credential
 
-
-    <!-- COURSE -->
-
-    <section class="field">
-
-        <label>
-            PROGRAM &amp; COURSE
-        </label>
-
-        <div
-            id="course"
-            class="value"
-        >
-            Loading...
-        </div>
-
-    </section>
+        </button>
 
 
-    <!-- INSTITUTION -->
+        <!-- =====================================
+             NOTICE
+        ====================================== -->
 
-    <section class="field">
-
-        <label>
-            INSTITUTION
-        </label>
-
-        <div
-            id="institution"
-            class="value"
-        >
-            Loading...
-        </div>
-
-    </section>
+        <p class="demo-notice">
+            DEMONSTRATION CREDENTIAL
+        </p>
 
 
-    <!-- ID -->
-
-    <section class="field">
-
-        <label>
-            REGISTRATION / ID
-        </label>
-
-        <div
-            id="displayCredentialId"
-            class="value gold"
-        >
-            Loading...
-        </div>
-
-    </section>
+    </main>
 
 
-    <!-- DATE -->
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
 
-    <section class="field">
-
-        <label>
-            ISSUED ON
-        </label>
-
-        <div
-            id="issuedDate"
-            class="value"
-        >
-            Loading...
-        </div>
-
-    </section>
-
-
-    <!-- STATUS -->
-
-    <section class="field">
-
-        <label>
-            CREDENTIAL STATUS
-        </label>
-
-        <div
-            id="status"
-            class="value gold"
-        >
-            Loading...
-        </div>
-
-    </section>
-
-
-    <div class="divider"></div>
-
-
-    <!-- REGISTRY HASH -->
-
-    <section class="hash-box">
-
-        <label>
-            REGISTRY HASH
-        </label>
-
-        <div
-            id="registryHash"
-            class="hash"
-        >
-            Loading...
-        </div>
-
-    </section>
-
-
-    <!-- SAVE -->
-
-    <button
-        class="save-button"
-        onclick="downloadCredential()"
-    >
-
-        ↓ &nbsp; Save Credential
-
-    </button>
-
-
-    <!-- DEMO NOTICE -->
-
-    <p class="demo-notice">
-
-        DEMONSTRATION CREDENTIAL
-
-    </p>
-
-
-</main>
-
-
-<script src="verify.js"></script>
+    <script src="verify.js?v=3"></script>
 
 
 </body>
