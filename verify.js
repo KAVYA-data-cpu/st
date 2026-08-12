@@ -4,12 +4,11 @@
 
 const credentials = {
 
+    // --------------------------------------
+    // BRAMHADEVARA HEMALATHA
+    // --------------------------------------
 
-    // ======================================
-    // HEMALATHA
-    // ======================================
-
-    "ST-2026-001": {
+    "CID:ST/INP/12280": {
 
         studentName:
             "Bramhadevara Hemalatha",
@@ -21,7 +20,7 @@ const credentials = {
             "Madanapalle Institute of Technology and Science",
 
         id:
-            "ST-2026-001",
+            "CID:ST/INP/12280",
 
         issuedDate:
             "02 August 2026",
@@ -30,19 +29,19 @@ const credentials = {
             "Active / Registered",
 
         registryHash:
-            "7a92c8e4f91d3a8b6e21c4f7a90d5e31"
+            "0x7a92c8e4f91d3a8b6e21c4f7a90d5e31"
 
     },
 
 
-    // ======================================
-    // KALPANA
-    // ======================================
+    // --------------------------------------
+    // VADDE HARSHITHA
+    // --------------------------------------
 
-    "ST-2026-002": {
+    "CID:ST/INP/12464": {
 
         studentName:
-            "Ande Kalpana",
+            "Vadde Harshitha",
 
         course:
             "Web Development",
@@ -51,7 +50,7 @@ const credentials = {
             "Madanapalle Institute of Technology and Science",
 
         id:
-            "ST-2026-002",
+            "CID:ST/INP/12464",
 
         issuedDate:
             "02 August 2026",
@@ -60,19 +59,19 @@ const credentials = {
             "Active / Registered",
 
         registryHash:
-            "8b83d9f5a02e4b9c7f32d5e8a91e6f42"
+            "0x4b83d91e62a7f5c8d31e9a46b2f70815"
 
     },
 
 
-    // ======================================
-    // KAVYA
-    // ======================================
+    // --------------------------------------
+    // KATTUBADI HASINI
+    // --------------------------------------
 
-    "ST-2026-003": {
+    "CID:ST/INP/12247": {
 
         studentName:
-            "Mitta Kavya",
+            "Kattubadi Hasini",
 
         course:
             "Web Development",
@@ -81,7 +80,7 @@ const credentials = {
             "Madanapalle Institute of Technology and Science",
 
         id:
-            "ST-2026-003",
+            "CID:ST/INP/12247",
 
         issuedDate:
             "02 August 2026",
@@ -90,37 +89,7 @@ const credentials = {
             "Active / Registered",
 
         registryHash:
-            "9c94eaf6b13f5cad8a43e6f9b02f7a53"
-
-    },
-
-
-    // ======================================
-    // KHYATHI
-    // ======================================
-
-    "ST-2026-004": {
-
-        studentName:
-            "Kedari Khyathi",
-
-        course:
-            "Web Development",
-
-        institution:
-            "Madanapalle Institute of Technology and Science",
-
-        id:
-            "ST-2026-004",
-
-        issuedDate:
-            "02 August 2026",
-
-        status:
-            "Active / Registered",
-
-        registryHash:
-            "ad05fb07c24e6dbe9a54f7a0c13b8e64"
+            "0x91c57e3a84d26b7f5e10c943a68d2f31"
 
     }
 
@@ -128,7 +97,7 @@ const credentials = {
 
 
 // ==========================================
-// WAIT FOR HTML
+// LOAD AFTER HTML IS READY
 // ==========================================
 
 document.addEventListener(
@@ -143,15 +112,6 @@ document.addEventListener(
 
 function loadCredential() {
 
-    console.log(
-        "System Tron verification page loaded"
-    );
-
-
-    // --------------------------------------
-    // GET URL PARAMETERS
-    // --------------------------------------
-
     const params =
         new URLSearchParams(
             window.location.search
@@ -160,12 +120,6 @@ function loadCredential() {
 
     const credentialId =
         params.get("id");
-
-
-    console.log(
-        "Requested Credential ID:",
-        credentialId
-    );
 
 
     // --------------------------------------
@@ -190,12 +144,6 @@ function loadCredential() {
         credentials[credentialId];
 
 
-    console.log(
-        "Found Credential:",
-        credential
-    );
-
-
     // --------------------------------------
     // INVALID ID
     // --------------------------------------
@@ -211,7 +159,7 @@ function loadCredential() {
 
 
     // --------------------------------------
-    // DISPLAY STUDENT NAME
+    // DISPLAY STUDENT
     // --------------------------------------
 
     document.getElementById(
@@ -277,12 +225,7 @@ function loadCredential() {
     document.getElementById(
         "registryHash"
     ).textContent =
-        "0x" + credential.registryHash;
-
-
-    console.log(
-        "Credential displayed successfully."
-    );
+        credential.registryHash;
 
 }
 
@@ -334,17 +277,11 @@ function showInvalidCredential(message) {
     ).textContent =
         "-";
 
-
-    console.log(
-        "Invalid credential:",
-        message
-    );
-
 }
 
 
 // ==========================================
-// SAVE CREDENTIAL
+// SAVE / PRINT
 // ==========================================
 
 function downloadCredential() {
