@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #24200b,
+            #080908 55%
+        );
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    padding: 25px 15px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.credential-card {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17180f,
+            #0c0d0b
+        );
+
+    border:
+        1px solid #6b5b19;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 35px
+        rgba(255, 211, 25, 0.08);
+}
+
+
+/* ==========================================
+   VERIFIED BANNER
+========================================== */
+
+.verified-banner {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border:
+        1px solid #665617;
+
+    border-radius: 22px;
+
+    background:
+        rgba(75, 65, 20, 0.25);
+}
+
+
+.check-circle {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffd21a;
+
+    color: #111;
+
+    font-size: 38px;
+
+    font-weight: bold;
+}
+
+
+.verified-banner h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    color: #ffd21a;
+
+    letter-spacing: 1px;
+}
+
+
+.verified-banner p {
+
+    margin: 6px 0 0;
+
+    color: #ddd;
+}
+
+
+/* ==========================================
+   ORGANIZATION
+========================================== */
+
+.organization {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+
+.org-logo {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid #ffd21a;
+
+    border-radius: 14px;
+
+    color: #ffd21a;
+
+    font-weight: bold;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+}
+
+
+.org-name h2 {
+
+    margin: 0;
+
+    font-size: 22px;
+}
+
+
+.org-name p {
+
+    margin: 5px 0 0;
+
+    color: #d1b83b;
+}
+
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider {
+
+    height: 1px;
+
+    background: #292920;
+
+    margin: 30px 0;
+}
+
+
+/* ==========================================
+   FIELD
+========================================== */
+
+.field {
+
+    margin-bottom: 30px;
+}
+
+
+.field label,
+.hash-box label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #9d8927;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.value {
+
+    color: #eeeeee;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    word-break: break-word;
+}
+
+
+.gold {
+
+    color: #ffd21a;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   REGISTRY HASH
+========================================== */
+
+.hash-box {
+
+    padding: 25px;
+
+    background: #10110f;
+
+    border:
+        1px solid #292920;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.hash {
+
+    color: #bdbdbd;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 15px;
+
+    word-break: break-all;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.save-button {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #ffd21a;
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.save-button:hover {
+
+    background: #ffe45c;
+}
+
+
+/* ==========================================
+   DEMO NOTICE
+========================================== */
+
+.demo-notice {
+
+    text-align: center;
+
+    margin: 20px 0 0;
+
+    color: #9d8927;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 10px;
+    }
+
+
+    .credential-card {
+
+        padding: 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .verified-banner {
+
+        padding: 18px;
+    }
+
+
+    .check-circle {
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 30px;
+    }
+
+
+    .verified-banner h1 {
+
+        font-size: 21px;
+    }
+
+
+    .organization {
+
+        margin-top: 25px;
+    }
+
+
+    .org-logo {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 18px;
+    }
+
+
+    .org-name h2 {
+
+        font-size: 18px;
+    }
+
+
+    .value {
+
+        font-size: 18px;
+    }
+
+}

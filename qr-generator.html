@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>System Tron Credential QR Generator</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #24200b,
+                    #080908 60%
+                );
+
+            color: white;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 520px;
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #17180f,
+                    #0c0d0b
+                );
+
+            border:
+                1px solid #6b5b19;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 0 35px
+                rgba(255, 211, 25, 0.08);
+        }
+
+
+        .header {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .company-tag {
+
+            display: inline-flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            width: 70px;
+
+            height: 70px;
+
+            margin-bottom: 15px;
+
+            border:
+                2px solid #ffd21a;
+
+            border-radius: 15px;
+
+            color: #ffd21a;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+
+        h1 {
+
+            margin: 0;
+
+            color: #ffd21a;
+
+            font-size: 26px;
+        }
+
+
+        .subtitle {
+
+            margin-top: 8px;
+
+            color: #aaa;
+
+            line-height: 1.5;
+        }
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #9d8927;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+        }
+
+
+        input {
+
+            width: 100%;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            border:
+                1px solid #444;
+
+            border-radius: 10px;
+
+            background: #111;
+
+            color: white;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+
+        input:focus {
+
+            border-color: #ffd21a;
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #ffd21a;
+
+            color: #111;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+
+            background: #ffe45c;
+        }
+
+
+        #qrcode {
+
+            display: flex;
+
+            justify-content: center;
+
+            margin: 30px auto 20px;
+        }
+
+
+        .url {
+
+            padding: 15px;
+
+            background: #10110f;
+
+            border:
+                1px solid #292920;
+
+            border-radius: 12px;
+
+            color: #999;
+
+            font-size: 12px;
+
+            word-break: break-all;
+
+            line-height: 1.5;
+        }
+
+
+        .notice {
+
+            margin-top: 20px;
+
+            text-align: center;
+
+            color: #9d8927;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+
+                padding: 25px;
+
+            }
+
+            h1 {
+
+                font-size: 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div class="header">
+
+        <div class="company-tag">
+            ST
+        </div>
+
+        <h1>
+            System Tron
+        </h1>
+
+        <div class="subtitle">
+            Credential QR Generator
+        </div>
+
+    </div>
+
+
+    <label>
+        CREDENTIAL ID
+    </label>
+
+
+    <input
+        id="credentialId"
+        type="text"
+        value="ST-2026-001"
+        placeholder="Example: ST-2026-001"
+    >
+
+
+    <button onclick="generateQR()">
+
+        Generate QR Code
+
+    </button>
+
+
+    <div id="qrcode"></div>
+
+
+    <div
+        id="verificationUrl"
+        class="url"
+    ></div>
+
+
+    <div class="notice">
+
+        DEMONSTRATION CREDENTIAL
+
+    </div>
+
+
+</div>
+
+
+<!-- QR CODE LIBRARY -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+<script>
+
+function generateQR() {
+
+    const id =
+        document
+            .getElementById("credentialId")
+            .value
+            .trim();
+
+
+    if (!id) {
+
+        alert(
+            "Please enter a credential ID."
+        );
+
+        return;
+    }
+
+
+    /*
+        IMPORTANT
+
+        QR points to verify.html.
+
+        Because both files are deployed
+        on the same Vercel project,
+        window.location.origin automatically
+        uses your current domain.
+    */
+
+    const verificationURL =
+        window.location.origin +
+        "/verify.html?id=" +
+        encodeURIComponent(id);
+
+
+    /*
+        Remove old QR
+    */
+
+    document
+        .getElementById("qrcode")
+        .innerHTML = "";
+
+
+    /*
+        Generate new QR
+    */
+
+    new QRCode(
+
+        document.getElementById("qrcode"),
+
+        {
+
+            text: verificationURL,
+
+            width: 250,
+
+            height: 250,
+
+            colorDark: "#000000",
+
+            colorLight: "#ffffff",
+
+            correctLevel:
+                QRCode.CorrectLevel.H
+
+        }
+
+    );
+
+
+    /*
+        Show verification URL
+    */
+
+    document
+        .getElementById("verificationUrl")
+        .textContent =
+        verificationURL;
+}
+
+
+/*
+    Generate default QR
+*/
+
+window.addEventListener(
+    "DOMContentLoaded",
+    generateQR
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #24200b,
+            #080908 60%
+        );
+
+    color: #ffffff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17180f,
+            #0c0d0b
+        );
+
+    border:
+        1px solid #6b5b19;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 0 35px
+        rgba(255, 211, 25, 0.08);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   SYSTEM TRON TAG
+========================================== */
+
+.company-tag {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    border:
+        2px solid #ffd21a;
+
+    border-radius: 14px;
+
+    color: #ffd21a;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background:
+        rgba(255, 210, 26, 0.04);
+}
+
+
+/* ==========================================
+   TITLE
+========================================== */
+
+h1 {
+
+    margin: 0;
+
+    color: #ffd21a;
+
+    font-size: 26px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   SUBTITLE
+========================================== */
+
+.subtitle {
+
+    margin-top: 8px;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   LABEL
+========================================== */
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #9d8927;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid #444;
+
+    border-radius: 10px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+input::placeholder {
+
+    color: #666;
+}
+
+
+input:focus {
+
+    border-color: #ffd21a;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 210, 26, 0.12);
+}
+
+
+/* ==========================================
+   GENERATE BUTTON
+========================================== */
+
+button {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ffd21a;
+
+    color: #111;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+button:hover {
+
+    background: #ffe45c;
+}
+
+
+button:active {
+
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   QR CODE
+========================================== */
+
+#qrcode {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 30px auto 20px;
+
+    min-height: 20px;
+}
+
+
+/*
+   QRCode.js creates a canvas/image here.
+   This wrapper gives it a clean white background.
+*/
+
+#qrcode canvas,
+#qrcode img {
+
+    display: block;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   VERIFICATION URL
+========================================== */
+
+.url {
+
+    padding: 15px;
+
+    background: #10110f;
+
+    border:
+        1px solid #292920;
+
+    border-radius: 12px;
+
+    color: #999;
+
+    font-size: 12px;
+
+    word-break: break-all;
+
+    line-height: 1.5;
+
+    text-align: left;
+}
+
+
+/* ==========================================
+   DEMONSTRATION NOTICE
+========================================== */
+
+.notice {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #9d8927;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 12px;
+
+        align-items: flex-start;
+    }
+
+
+    .container {
+
+        margin-top: 20px;
+
+        padding: 25px 20px;
+
+        border-radius: 22px;
+    }
+
+
+    .company-tag {
+
+        width: 60px;
+
+        height: 60px;
+
+        font-size: 21px;
+    }
+
+
+    h1 {
+
+        font-size: 22px;
+    }
+
+
+    .subtitle {
+
+        font-size: 14px;
+    }
+
+
+    input {
+
+        font-size: 16px;
+
+        padding: 14px;
+    }
+
+
+    button {
+
+        padding: 15px;
+    }
+
+
+    #qrcode {
+
+        margin-top: 25px;
+    }
+
+
+    #qrcode canvas,
+    #qrcode img {
+
+        max-width: 100%;
+
+        height: auto;
+    }
+
+
+    .url {
+
+        font-size: 11px;
+
+        padding: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   PRINT
+========================================== */
+
+@media print {
+
+    body {
+
+        background: white;
+
+        color: black;
+    }
+
+
+    .container {
+
+        border: none;
+
+        box-shadow: none;
+
+        background: white;
+    }
+
+
+    button {
+
+        display: none;
+    }
+
+
+    .notice {
+
+        color: #555;
+    }
+
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        System Tron Credential Verification
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="verify.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="credential-card">
+
+
+    <!-- VERIFIED HEADER -->
+
+    <section class="verified-banner">
+
+
+        <div class="check-circle">
+
+            ✓
+
+        </div>
+
+
+        <div>
+
+            <h1>
+                VERIFIED STUDENT
+            </h1>
+
+            <p>
+                Digital Credential Demo
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- COMPANY -->
+
+    <section class="organization">
+
+
+        <div class="org-logo">
+
+            ST
+
+        </div>
+
+
+        <div class="org-name">
+
+            <h2>
+                SYSTEM TRON
+            </h2>
+
+            <p>
+                Live Verification Record
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- STUDENT NAME -->
+
+    <section class="field">
+
+        <label>
+            STUDENT NAME
+        </label>
+
+        <div
+            id="studentName"
+            class="value"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- COURSE -->
+
+    <section class="field">
+
+        <label>
+            PROGRAM &amp; COURSE
+        </label>
+
+        <div
+            id="course"
+            class="value"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- INSTITUTION -->
+
+    <section class="field">
+
+        <label>
+            INSTITUTION
+        </label>
+
+        <div
+            id="institution"
+            class="value"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- ID -->
+
+    <section class="field">
+
+        <label>
+            REGISTRATION / ID
+        </label>
+
+        <div
+            id="displayCredentialId"
+            class="value gold"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- DATE -->
+
+    <section class="field">
+
+        <label>
+            ISSUED ON
+        </label>
+
+        <div
+            id="issuedDate"
+            class="value"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- STATUS -->
+
+    <section class="field">
+
+        <label>
+            CREDENTIAL STATUS
+        </label>
+
+        <div
+            id="status"
+            class="value gold"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+    <!-- REGISTRY HASH -->
+
+    <section class="hash-box">
+
+        <label>
+            REGISTRY HASH
+        </label>
+
+        <div
+            id="registryHash"
+            class="hash"
+        >
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- SAVE -->
+
+    <button
+        class="save-button"
+        onclick="downloadCredential()"
+    >
+
+        ↓ &nbsp; Save Credential
+
+    </button>
+
+
+    <!-- DEMO NOTICE -->
+
+    <p class="demo-notice">
+
+        DEMONSTRATION CREDENTIAL
+
+    </p>
+
+
+</main>
+
+
+<script src="verify.js"></script>
+
+
+</body>
+
+</html>
