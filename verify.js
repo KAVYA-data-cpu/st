@@ -114,7 +114,7 @@ const credentials = {
             "K.LAVANYA",
 
         course:
-            "Web Development",
+            "Data Science",
 
         institution:
             "Madanapalle Institute of Technology and Science",
