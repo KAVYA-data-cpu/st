@@ -182,6 +182,34 @@ const credentials = {
             "0x7a92c8e4f91d3a8b6e21c4f7a90d5e31"
 
     }
+    
+    "CID:ST/INP/12561": {
+
+        studentName:
+            "PINDALA LAHARI",
+
+        course:
+            "Web Development",
+
+        institution:
+            "Madanapalle Institute of Technology and Science",
+
+        id:
+            "CID:ST/INP/12528",
+
+        issuedDate:
+            "02 August 2026",
+
+        status:
+            "Active / Registered",
+
+        registryHash:
+            "0x7a92c8e4f91d3a8b6e21c4f7a90d5e31"
+
+    }
+    
+
+
 
 };
 
