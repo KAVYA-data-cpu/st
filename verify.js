@@ -4,6 +4,10 @@
 
 const credentials = {
 
+    // ======================================
+    // 1. BRAMHADEVARA HEMALATHA
+    // ======================================
+
     "CID:ST/INP/12280": {
 
         studentName:
@@ -29,6 +33,10 @@ const credentials = {
 
     },
 
+
+    // ======================================
+    // 2. VADDE HARSHITHA
+    // ======================================
 
     "CID:ST/INP/12464": {
 
@@ -56,6 +64,10 @@ const credentials = {
     },
 
 
+    // ======================================
+    // 3. KATTUBADI HASINI
+    // ======================================
+
     "CID:ST/INP/12247": {
 
         studentName:
@@ -81,6 +93,10 @@ const credentials = {
 
     },
 
+
+    // ======================================
+    // 4. YAMPAKULA JASMITHA
+    // ======================================
 
     "CID:ST/INP/12462": {
 
@@ -108,19 +124,53 @@ const credentials = {
     },
 
 
+    // ======================================
+    // 5. K. LAVANYA
+    // ======================================
+
     "CID:ST/INP/12173": {
 
         studentName:
             "K.LAVANYA",
 
         course:
-            "Data Science",
+            "Web Development",
 
         institution:
             "Madanapalle Institute of Technology and Science",
 
         id:
             "CID:ST/INP/12173",
+
+        issuedDate:
+            "02 August 2026",
+
+        status:
+            "Active / Registered",
+
+        registryHash:
+            "0x7a92c8e4f91d3a8b6e21c4f7a90d5e31"
+
+    },
+
+
+    // ======================================
+    // 6. MUTHINENI JAYASREE
+    // ======================================
+
+    "CID:ST/INP/12561": {
+
+        studentName:
+            "MUTHINENI JAYASREE",
+
+        course:
+            "Web Development",
+
+        institution:
+            "Madanapalle Institute of Technology and Science",
+
+        id:
+            "CID:ST/INP/12561",
 
         issuedDate:
             "02 August 2026",
@@ -152,6 +202,7 @@ document.addEventListener(
 
 function loadCredential() {
 
+    // Get ID from URL
     const params =
         new URLSearchParams(
             window.location.search
@@ -162,9 +213,9 @@ function loadCredential() {
         params.get("id");
 
 
-    // --------------------------------------
-    // NO ID
-    // --------------------------------------
+    // ======================================
+    // NO ID IN URL
+    // ======================================
 
     if (!credentialId) {
 
@@ -176,17 +227,17 @@ function loadCredential() {
     }
 
 
-    // --------------------------------------
+    // ======================================
     // FIND CREDENTIAL
-    // --------------------------------------
+    // ======================================
 
     const credential =
         credentials[credentialId];
 
 
-    // --------------------------------------
-    // INVALID ID
-    // --------------------------------------
+    // ======================================
+    // CREDENTIAL NOT FOUND
+    // ======================================
 
     if (!credential) {
 
@@ -198,9 +249,9 @@ function loadCredential() {
     }
 
 
-    // --------------------------------------
-    // DISPLAY CREDENTIAL
-    // --------------------------------------
+    // ======================================
+    // DISPLAY STUDENT NAME
+    // ======================================
 
     document.getElementById(
         "studentName"
@@ -208,11 +259,19 @@ function loadCredential() {
         credential.studentName;
 
 
+    // ======================================
+    // DISPLAY COURSE
+    // ======================================
+
     document.getElementById(
         "course"
     ).textContent =
         credential.course;
 
+
+    // ======================================
+    // DISPLAY INSTITUTION
+    // ======================================
 
     document.getElementById(
         "institution"
@@ -220,11 +279,19 @@ function loadCredential() {
         credential.institution;
 
 
+    // ======================================
+    // DISPLAY CREDENTIAL ID
+    // ======================================
+
     document.getElementById(
         "displayCredentialId"
     ).textContent =
         credential.id;
 
+
+    // ======================================
+    // DISPLAY ISSUED DATE
+    // ======================================
 
     document.getElementById(
         "issuedDate"
@@ -232,11 +299,19 @@ function loadCredential() {
         credential.issuedDate;
 
 
+    // ======================================
+    // DISPLAY STATUS
+    // ======================================
+
     document.getElementById(
         "status"
     ).textContent =
         credential.status;
 
+
+    // ======================================
+    // DISPLAY REGISTRY HASH
+    // ======================================
 
     document.getElementById(
         "registryHash"
@@ -252,42 +327,49 @@ function loadCredential() {
 
 function showInvalidCredential(message) {
 
+    // Student name
     document.getElementById(
         "studentName"
     ).textContent =
         message;
 
 
+    // Course
     document.getElementById(
         "course"
     ).textContent =
         "-";
 
 
+    // Institution
     document.getElementById(
         "institution"
     ).textContent =
         "-";
 
 
+    // Credential ID
     document.getElementById(
         "displayCredentialId"
     ).textContent =
         "-";
 
 
+    // Issued date
     document.getElementById(
         "issuedDate"
     ).textContent =
         "-";
 
 
+    // Status
     document.getElementById(
         "status"
     ).textContent =
         "Invalid";
 
 
+    // Registry hash
     document.getElementById(
         "registryHash"
     ).textContent =
