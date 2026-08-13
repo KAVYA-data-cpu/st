@@ -183,7 +183,7 @@ const credentials = {
 
     }
     
-    "CID:ST/INP/12561": {
+    "CID:ST/INP/12528": {
 
         studentName:
             "PINDALA LAHARI",
